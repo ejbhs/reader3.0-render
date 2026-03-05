@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
     ttyd \
-    openjdk-17-jre-headlink \
+    openjdk-17-jre-headless \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
