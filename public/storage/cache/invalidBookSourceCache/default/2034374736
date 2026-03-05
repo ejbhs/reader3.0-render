@@ -1,0 +1,1 @@
+1772747120426-600 {"sourceUrl":"https://69shux.co","time":1772747120426,"error":"com.script.ScriptException: org.mozilla.javascript.EcmaError: TypeError: Cannot find function startBrowserAwait in object io.legado.app.model.analyzeRule.AnalyzeUrl@67e22711. (<Unknown source>#1) in <Unknown source> at line number 1"}
