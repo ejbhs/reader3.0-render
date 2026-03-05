@@ -13,4 +13,4 @@ COPY public/reader-pro-3.2.14.jar ./
 EXPOSE 8080
 ENV PORT=8080
 
-CMD java -jar reader-pro-3.2.14.jar --server.port=$PORT --server.servlet.context-path=/reading/
+CMD java -jar reader-pro-3.2.14.jar 
