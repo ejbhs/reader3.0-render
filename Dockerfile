@@ -1,0 +1,19 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y \
+    ttyd \
+    openjdk-17-jre-headlink \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY public/reader-pro-3.2.14.jar ./
+
+EXPOSE 8080
+EXPOSE 7681
+
+ENV PORT=8080
+
+CMD ttyd -p 7681 -W changeme bash & \
+    java -jar reader-pro-3.2.14.jar --server.port=$PORT --server.servlet.context-path=/reading/
