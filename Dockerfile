@@ -1,5 +1,5 @@
 
-FROM eclipse-temurin:17-jdk-slim
+FROM buddy/ubuntu-java:20.04-openjdk-17
 
 RUN apt-get update && apt-get install -y \
     curl \
@@ -13,3 +13,4 @@ EXPOSE 8080
 ENV PORT=8080
 
 CMD ["java", "-jar", "reader-pro-3.2.14.jar"]
+
