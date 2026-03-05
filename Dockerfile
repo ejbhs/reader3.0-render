@@ -1,8 +1,7 @@
 
-FROM ubuntu:latest
+FROM openjdk:17-jdk-slim
 
 RUN apt-get update && apt-get install -y \
-    openjdk-17-jre-headless \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
@@ -13,4 +12,4 @@ COPY public/reader-pro-3.2.14.jar ./
 EXPOSE 8080
 ENV PORT=8080
 
-CMD java -jar reader-pro-3.2.14.jar 
+CMD ["java", "-jar", "reader-pro-3.2.14.jar"]
